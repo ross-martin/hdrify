@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  imagemagick:
+    build: .
+    volumes:
+      - ./input:/data/input
+      - ./output:/data/output
+      - ./2020_profile.icc:/data/2020_profile.icc
+    entrypoint: ["magick"]
